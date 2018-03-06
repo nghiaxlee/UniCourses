@@ -3,31 +3,26 @@ function $(sel)
     return document.querySelector(sel);
 }
 
-/*$("#num")
-    .addEventListener("input", checkNum);*/
 $("#num")
     .addEventListener("keydown", checkNum1);
 
-const exceptionArr = [8, 9, 46, 13, 27, 190];
+document.addEventListener("keydown", onDocPress);
 
-function checkNum()
+function onDocPress(e)
 {
-    console.log(this.value);
+    if (e.target.matches(".num"))
+    {
+        console.log(e.target);
+        checkNum1(e);
+    }
 }
 
 function checkNum1(e)
 {
-    /*
-        8 backspace
-        9 tab
-        46 delete
-        13 enter
-        27 esc
-        190 .
-    */
-    console.log(e.keyCode);
-    if (exceptionArr.indexOf(e.keyCode) !== -1)
-        return
-    if (e.keyCode < 48 || e.keyCode > 57)
-        e.preventDefault();
+    const exceptionArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "Backspace", "F5", "Enter", "."];
+    console.log(e.key);
+    const key = e.key;
+    if (exceptionArr.includes(key))
+        return;
+    e.preventDefault();
 }

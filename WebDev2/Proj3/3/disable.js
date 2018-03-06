@@ -8,9 +8,10 @@ $("#listl")
 
 function onClick(e)
 {
-    if (e.target.tagName === 'A')
+    // if (e.target.tagName === 'A')
+    if (!e.target.matches('a[href*="elte.hu"]'))
     {
-        if (e.target.href.indexOf("elte.hu") === -1) 
+        // if (!e.target.href.includes("elte.hu")) 
             e.preventDefault();
     }
 }
