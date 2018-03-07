@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+       <title>Page Title</title>
+       <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8"/>
+</head>
+<body>
+        <div id="header">
+                <h1>Best Movies About The &lt;Internet/Web&gt;</h1>
+                <div id="mainmenu"><a href="index.html">Homepage</a> | <b>Form</b> </div>
+        </div>	
+        <div id="main">
+            <h2>Send your favourite movies</h2>
+            <p>Do you have favourite movie in this topic? If yes, please fill the following form!</p>
+        
+            <form action="mailto:johnsmith@mailinator.com" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Datasheet of movie</legend>
+        
+                <label for="title"><strong>Title</strong></label><br />
+                <input type="text" name="title" id="title" size="60" /><br />
+        
+                <label for="imdbweb"><strong>IMDb webaddress:</strong></label><br />
+                <input type="text" name="imdb" id="imdbweb" size="60" /><br />
+                
+                <label for="st"><strong>Story shortly</strong></label><br />
+                <textarea name="story" id="st" cols="60" rows="10"></textarea>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Rating</legend>
+                <p>Your rating in a 1 to 5 scale</p>
+                <!-- If use radio buttons => must have same name -->
+                <input type="radio" id="r1" name="rating" value="1" />
+                <label for="r1">1 - unwatchable</label>
+                <input type="radio" id="r2" name="rating" value="2" />
+                <label for="r2">2</label>
+                <input type="radio" id="r3" name="rating" value="3" />
+                <label for="r3">3</label>
+                <input type="radio" id="r4" name="rating" value="4" />
+                <label for="r4">4</label>
+                <input type="radio" id="r5" name="rating" value="5" />
+                <label for="r5">5 - must watch</label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Personal info</legend>
+        
+                <label for="name"><strong>Name</strong></label><br />
+                <input type="text" name="name" id="name" size="60" /><br />
+                <label for="mail"><strong>E-mail address:</strong></label><br />
+                <input type="text" name="mail" id="mail" size="60" /><br />
+                <input type="checkbox" name="newsletter" value="yes" id="news" />
+                <label for="news">I'd like to subscribe to a newsletter</label><br />
+            </fieldset>
+        
+            <fieldset>
+                <legend>Send</legend>
+        
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+            </fieldset>
+        
+            </form>
+        
+        
+            <p>These movies are already on my list:</p>
+                <div id="nav">
+                    <ol>
+                        <li><a href="index.html#socialnetwork">The Social Network</a></li>
+                        <li><a href="index.html#her">Her</a></li>
+                        <li><a href="index.html#deepweb">Deep Web</a></li>
+                    </ol>
+                </div>	
+        </div>
+        <div id="footer">
+                <div id="address">
+                <p>Author: John Smith (<a href="mailto:johnsmith@mailinator.com)">johnsmith@mailinator.com)</a><br />
+                H-1117 Budapest, Noname street 17</p>
+                </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* custom fonts */ 
+ @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+ 
+ 
+/* html tag properties */
+html {
+	background-color:darkgray;
+}
+
+/* body properties */
+ body {
+	font-family: Arial, Verdana, sans-serif;
+	background-color:white;
+	width:80%;
+	padding:20px; 
+	margin:20px auto;
+	border:2px solid black;
+	border-radius:20px;
+}
+
+
+/* headings */
+h1,h2,h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+	font-size:3em;
+	text-shadow: lightgray 5px 5px 3px;
+	font-variant:small-caps;
+	letter-spacing:2px;
+	text-align:center;
+}
+h2 {
+	font-size:2em;
+}
+
+h3 {
+	font-size:1.5em;
+	text-indent:2em;
+}
+
+/* other settings */
+figcaption {
+	text-align:center;
+	font-weight:bold
+}
+
+p {
+	text-align:justify;
+	line-height:1.5em;
+}
+
+q {font-style:italic}
+
+img,video {width:90%; height:auto;}
+
+div#introduction  {
+padding:20px;
+background-color:lightyellow;
+margin:10px;
+border:1px dotted gray;
+}
+
+#introduction h2+p {text-align:right}
+
+/* table settings */
+
+table {border-collapse:collapse;}
+th {text-align:left}
+table {width:300px;}
+th,td {border:1px solid gray}
+
+
+/* structural elements */
+aside {
+	float:right;
+	margin:10px;
+	background-color:lightgray;
+}
+
+footer p, #mainmenu, #footer p  {
+	text-align:center;
+}
+
+
+pre {
+background-color:black;
+color:white;
+overflow:auto;
+}
+
+hr {
+	border:0;
+	border-bottom:1px dotted gray;
+}
+
+/* form */
+
+fieldset {
+	background-color: lightyellow;
+}
+
+fieldset {
+	border-radius: 10px;
+}
+
