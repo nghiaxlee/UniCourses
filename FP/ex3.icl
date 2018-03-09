@@ -120,24 +120,37 @@ exists n [x : xs] = (x == n) || (exists n xs)
 
 
 // 11. write the function duplicates which checks if there are duplicates in the list xs
-//duplicates :: [Int] -> Bool
+duplicates :: [Int] -> Bool
+duplicates [] = False
+duplicates [x : xs] = (exists x xs) || duplicates xs
 
-
-// Start = duplicates [1, 2, 1, 1, 2, 3, 2, 1, 3] // True
+//Start = duplicates [1, 2, 1, 1, 2, 3, 2, 1, 3] // True
+//Start = duplicates [1..69]
 
 
 // 12. remove x xs removes x from the list xs
-//remove :: Int [Int] -> [Int]
+remove :: Int [Int] -> [Int]
+remove x [] = []
+remove x [h : t]
+| x == h = remove x t
+= [h : remove x t]
+
+//Start = remove 1 [1, 2, 1, 1, 2, 3, 2, 1, 3]
 
 
 // 13. removeDuplicates l returns the list l with all duplicate elements removed
-//removeDuplicates :: [Int] -> [Int]
+removeDuplicates :: [Int] -> [Int]
+removeDuplicates [] = []
+removeDuplicates [x : xs] = [x : removeDuplicates (remove x xs)]
 
-// Start = removeDuplicates [1, 2, 1, 2, 3, 1, 2, 4, 2, 3]
+//Start = removeDuplicates [1, 2, 1, 2, 3, 1, 2, 4, 2, 3]
 
 
 // 14. filter the elements that are satisfying a condition
-//filter` :: (Int -> Bool) [Int] -> [Int]
+filter` :: (Int -> Bool) [Int] -> [Int]
+filter` p [] = []
+filter` p [x : xs]
+| p x = [x : filter` p xs]
+= filter` p xs
 
-
-// Start = filter` ((<>) 5) [1, 5, 6, 7, 5, 8, 5]  // [1, 6, 7, 8] 
+//Start = filter` ((<>) 5) [1, 5, 6, 7, 5, 8, 5]  // [1, 6, 7, 8] 

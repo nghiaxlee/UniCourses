@@ -1,15 +1,9 @@
 Version: 1.4
 MainModule
-	Name:	ex3
+	Name:	ex4
 	Dir:	{Project}
 	DclOpen:	False
-	Icl
-		WindowPosition
-			X:	82
-			Y:	2
-			SizeX:	800
-			SizeY:	576
-	IclOpen:	False
+	IclOpen:	True
 OtherModules
 	Module
 		Name:	StdArray

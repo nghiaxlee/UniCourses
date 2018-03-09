@@ -1,5 +1,5 @@
 .comp 920 00011101001
-.start __ex3_Start
+.start __ex31_Start
 .depend "_SystemEnum" "20111221123336"
 .depend "StdEnum" "20111221123336"
 .depend "StdMisc" "20111221123336"
@@ -19,7 +19,7 @@
 .depend "StdOverloaded" "20111221123336"
 .depend "StdBool" "20111221123336"
 .depend "StdEnv" "20111221123336"
-.module m_ex3 "ex3" "20180309113153"
+.module m_ex31 "ex31" "20180309111441"
 .endinfo
 .implab _cycle_in_spine
 .implab _type_error
@@ -54,116 +54,107 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.implab e_StdInt_s==;16
-.implab e_StdBool_snot
-.export __ex3_Start
+.implab e__SystemEnum_s_from_to;6
+.implab e_StdList_smap
+.implab e_StdInt_s+;6
+.implab e_StdInt_s*;9
+.export __ex31_Start
 .o 0 0
-__ex3_Start
-	build _ 0 n18
+__ex31_Start
+	build _ 0 n12
 .d 1 0
 	jmp _driver
-.n 0 _ ea18
+.n 0 _
 .o 1 0
-n18
+n12
 	push_node _cycle_in_spine 0
-.o 1 0
-ea18
-.o 1 0
-s18
-	buildh _Nil 0
-	buildI 5
-	buildh _Cons 2
-	buildI 8
-	buildh _Cons 2
-	buildI 5
-	buildh _Cons 2
-	buildI 7
-	buildh _Cons 2
-	buildI 6
-	buildh _Cons 2
-	buildI 5
-	buildh _Cons 2
-	buildI 1
-	buildh _Cons 2
-	buildI 5
-	buildh d21 1
-.d 3 0
-	jmp s17
-.desc d21 _hnf l21 2 0 "<>;20"
-.a 0 a21
-.o 2 0
-l21
-	repl_args 1 1
-.o 2 0
-a21
-.d 2 0
-	jsr ea21
-.o 0 1 b
-	buildB_b 0
+.d 0 0
+	jsr ea12
+.o 0 1 i
+	fillI_b 0 0
 	pop_b 1
 .d 1 0
 	rtn
-.o 2 0
-ea21
-	jsr_eval 1
-	pushI_a 1
-	pushI_a 0
-	pop_a 2
-.o 0 2 ii
-s21
-	push_b 1
-	push_b 1
-	eqI
-	updatepop_b 0 2
-	notB
-.d 0 1 b
-	rtn
-.n 2 _ ea17
+.o 0 0
+ea12
+.o 0 0
+s12
+	pushI 5
+.d 0 1 i
+	jmp s11
+.o 0 1 i
+s11
+	create
+	push_b 0
+	pushI 1
+	update_b 1 2
+	updatepop_b 0 1
+.d 1 2 ii
+	jsr e__SystemEnum_s_from_to;6
 .o 1 0
-n17
-	push_node _cycle_in_spine 2
-.o 3 0
-ea17
-	jsr_eval 1
-.o 3 0
-s17
-	eq_desc _Nil 0 1
+	buildh d23 0
+	create
+	push_a 2
+	update_a 1 3
+	update_a 2 1
+	update_a 0 2
+	pop_a 1
+.d 3 0
+	jsr e_StdList_smap
+.o 1 0
+	pushI 0
+.d 1 1 i
+	jmp s24
+.o 1 1 i
+s24
+	eq_desc _Nil 0 0
 	jmp_true case.1
 	jmp case.2
 case.1
-	fillh _Nil 0 2
-	pop_a 2
-.d 1 0
+	pop_a 1
+.d 0 1 i
 	rtn
 case.2
-	push_args 1 2 2
-	buildh _Nil 0
-	update_a 0 4
-	pop_a 1
-	push_a 2
+	repl_args 2 2
+	push_a 1
 	jsr_eval 0
-	push_a 1
-	push_a 1
+	push_b 0
+	updatepop_b 0 1
 	update_a 1 2
-	update_a 0 1
+	updatepop_a 0 1
+.d 1 1 i
+	jsr s24
+.o 0 1 i
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
 	pop_a 1
-	jsr_ap 1
-	pushB_a 0
 	pop_a 1
-	jmp_false else.3
-	push_a 1
-	push_a 3
-	build _ 2 n17
-	push_a 1
-	fillh _Cons 2 6
-	pop_a 4
+	addI
+.d 0 1 i
+	rtn
+.desc d23 _hnf l23 1 0 "<lambda>[line:122];30;22"
+.o 2 0
+l23
+	pop_a 1
+.d 1 0
+	jsr ea23
+.o 0 1 i
+	buildI_b 0
+	pop_b 1
 .d 1 0
 	rtn
-else.3
-	push_a 1
+.o 1 0
+ea23
 	jsr_eval 0
-	push_a 3
-	update_a 1 5
-	updatepop_a 0 4
-.d 3 0
-	jmp s17
+	pushI_a 0
+	pop_a 1
+.o 0 1 i
+s23
+	push_b 0
+	push_b 1
+	update_b 1 2
+	updatepop_b 0 1
+	mulI
+.d 0 1 i
+	rtn

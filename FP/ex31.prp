@@ -1,13 +1,13 @@
 Version: 1.4
 MainModule
-	Name:	ex3
+	Name:	ex31
 	Dir:	{Project}
 	DclOpen:	False
 	Icl
 		WindowPosition
-			X:	82
-			Y:	2
-			SizeX:	800
+			X:	10
+			Y:	10
+			SizeX:	783
 			SizeY:	576
 	IclOpen:	False
 OtherModules
