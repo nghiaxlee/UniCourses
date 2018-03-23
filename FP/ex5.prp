@@ -1,14 +1,14 @@
 Version: 1.4
 MainModule
-	Name:	ex4
+	Name:	ex5
 	Dir:	{Project}
 	DclOpen:	False
 	Icl
 		WindowPosition
-			X:	10
-			Y:	10
-			SizeX:	783
-			SizeY:	576
+			X:	-8
+			Y:	-31
+			SizeX:	1343
+			SizeY:	634
 	IclOpen:	True
 OtherModules
 	Module
@@ -64,7 +64,13 @@ OtherModules
 	Module
 		Name:	StdList
 		Dir:	{Application}\Libraries\StdEnv
-		DclOpen:	False
+		Dcl
+			WindowPosition
+				X:	0
+				Y:	623
+				SizeX:	0
+				SizeY:	0
+		DclOpen:	True
 		IclOpen:	False
 	Module
 		Name:	StdMisc
