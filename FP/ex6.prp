@@ -1,13 +1,13 @@
 Version: 1.4
 MainModule
-	Name:	ex51
+	Name:	ex6
 	Dir:	{Project}
 	DclOpen:	False
 	Icl
 		WindowPosition
-			X:	71
-			Y:	-4
-			SizeX:	857
+			X:	10
+			Y:	10
+			SizeX:	783
 			SizeY:	576
 	IclOpen:	False
 OtherModules
@@ -34,12 +34,6 @@ OtherModules
 	Module
 		Name:	StdClass
 		Dir:	{Application}\Libraries\StdEnv
-		Dcl
-			WindowPosition
-				X:	10
-				Y:	10
-				SizeX:	800
-				SizeY:	576
 		DclOpen:	False
 		IclOpen:	False
 	Module
@@ -91,12 +85,6 @@ OtherModules
 		Name:	StdReal
 		Dir:	{Application}\Libraries\StdEnv
 		DclOpen:	False
-		Icl
-			WindowPosition
-				X:	10
-				Y:	10
-				SizeX:	800
-				SizeY:	576
 		IclOpen:	False
 	Module
 		Name:	StdString
