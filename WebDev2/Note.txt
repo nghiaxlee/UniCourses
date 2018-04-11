@@ -1,0 +1,7 @@
+host: course website
+auth: lab computers (\INF domain)
+
+Step:
+1. Expected static HTML
+2. Data structure (arrays)
+3. 1. + 2. => Dynamic Solution, HTML template

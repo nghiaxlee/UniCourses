@@ -55,7 +55,7 @@ function update(dt)
                 x: Rand(0, canvas.width),
                 y: -100,
                 width: Rand(24, 42),
-                height: Rand(24, 42),
+                height: Rand(24, 42), 
                 vx: 0,
                 vy: Rand(24, 42),
             }

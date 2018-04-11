@@ -1,0 +1,39 @@
+/* large text for people with visual impairement */
+
+@import url('base.css');
+body {
+	font-size:2em;
+	
+}
+
+a#largetext {display: none;}
+a#normaltext {display: block;}
+
+header, main, footer {
+	width:90%;
+	max-width:1200px;
+	}
+	
+nav#forvisualimpairment { width:400px;}	
+
+nav#forvisualimpairment span {
+	background-image:url("../images/icons.png");
+	background-position:-330px 0px;
+	
+		
+}
+
+article#solutions   {
+	column-count: 1;
+			}
+			
+article#description  aside {
+	float:none;
+	width:90%;
+	margin:0;
+}
+article#variations figure {
+	position:static;
+	margin-left:100px;
+	width:300px;
+	}
