@@ -1,15 +1,15 @@
 Version: 1.4
 MainModule
-	Name:	ex7
+	Name:	ex81
 	Dir:	{Project}
 	DclOpen:	False
 	Icl
 		WindowPosition
 			X:	10
 			Y:	10
-			SizeX:	799
+			SizeX:	783
 			SizeY:	576
-	IclOpen:	True
+	IclOpen:	False
 OtherModules
 	Module
 		Name:	StdArray
@@ -64,12 +64,6 @@ OtherModules
 	Module
 		Name:	StdList
 		Dir:	{Application}\Libraries\StdEnv
-		Dcl
-			WindowPosition
-				X:	10
-				Y:	10
-				SizeX:	800
-				SizeY:	576
 		DclOpen:	False
 		IclOpen:	False
 	Module
@@ -100,6 +94,12 @@ OtherModules
 	Module
 		Name:	StdTuple
 		Dir:	{Application}\Libraries\StdEnv
+		Dcl
+			WindowPosition
+				X:	10
+				Y:	10
+				SizeX:	800
+				SizeY:	576
 		DclOpen:	False
 		IclOpen:	False
 	Module
