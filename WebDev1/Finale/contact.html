@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact - LMN's Website</title>
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <a href="index.html">Homepage</a> | <a href="knowledge.html" title="Where I share my knowledge.">Knowledge</a> | <a href="life.html" title="A little bit about my personal life">Life</a> | <a href="about.html" title="Some basic information about me">About</a> | <b>Contact</b>
+        </nav>
+    </header>
+    <main>
+        <p>Want to get in touch with me? Send me a message and I will try to get back to you within 24 hours!</p>
+        <form action="mailto:minhnghia.1999@gmail.com" method="post" enctype="text/plain">
+        <fieldset>
+                <legend><h4>Personal info</h4></legend>
+                <label for="name"><strong>Name</strong></label><br>
+                <input type="text" name="name" id="name" size="60"><br>
+                <label for="mail"><strong>E-mail address:</strong></label><br>
+                <input type="email" name="mail" id="mail" size="60"><br>
+        </fieldset>
+        <fieldset>
+                <legend><h4>Message:</h4></legend>
+                <textarea name="suggestions" rows="4" cols="36"></textarea>
+        </fieldset>
+        <fieldset disabled="disabled">
+                <legend><h4>Survey:</h4></legend>
+                <p>Would you like to help me improving this website: <input type="checkbox"> </p>
+                <!-- Put a script here -->
+        </fieldset>
+        <fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+        </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>Author: Le Minh Nghia</p>
+    </footer>
+</body>
+</html>
