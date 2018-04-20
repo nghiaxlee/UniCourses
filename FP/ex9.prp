@@ -1,6 +1,6 @@
 Version: 1.4
 MainModule
-	Name:	ex8
+	Name:	ex9
 	Dir:	{Project}
 	DclOpen:	False
 	Icl
@@ -84,7 +84,19 @@ OtherModules
 	Module
 		Name:	StdReal
 		Dir:	{Application}\Libraries\StdEnv
+		Dcl
+			WindowPosition
+				X:	10
+				Y:	10
+				SizeX:	800
+				SizeY:	576
 		DclOpen:	False
+		Icl
+			WindowPosition
+				X:	10
+				Y:	10
+				SizeX:	800
+				SizeY:	576
 		IclOpen:	False
 	Module
 		Name:	StdString
