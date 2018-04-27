@@ -133,7 +133,7 @@ where
 	| 2 ^ (lg x) <= x = (lg x) + 1
 	= lg x
 
-//Start = F 4
+//Start = F 255
 
 
 // 2. Create a tree and write the elements of it in 3 ways: inorder, preorder, postorder
@@ -157,4 +157,4 @@ Bsort a i
 
 BBsort :: [Int] -> [Int]
 BBsort a = Bsort a 0
-Start = BBsort [10, 9..1]
+//Start = BBsort [1, 10, 2, 9, 3, 8, 4, 7, 6, 5]

@@ -1,5 +1,5 @@
 .comp 920 00011101001
-.start __ex9_Start
+.start __ex10_Start
 .depend "_SystemEnum" "20111221133336"
 .depend "StdEnum" "20111221133336"
 .depend "StdMisc" "20111221133336"
@@ -19,7 +19,7 @@
 .depend "StdOverloaded" "20111221133336"
 .depend "StdBool" "20111221133336"
 .depend "StdEnv" "20111221133336"
-.module m_ex9 "ex9" "20180427103255"
+.module m_ex10 "ex10" "20180427111830"
 .endinfo
 .implab _cycle_in_spine
 .implab _type_error
@@ -54,153 +54,137 @@
 .impdesc d_S.6
 .implab n_S.6 ea_S.6
 .implab _driver
-.implab e_StdList_slength;47
+.impdesc e_StdList_d++
+.implab e_StdList_s++
+.implab e_StdList_n++ e_StdList_ea++
 .implab e_StdInt_s+;6
-.implab e_StdInt_s==;16
-.implab e_StdInt_s<;17
-.record r31 aaa 3 0 "Person"
-.desc0 d37 0 "Mon"
-.desc0 d38 1 "Tue"
-.desc0 d39 2 "Wed"
-.desc0 d40 3 "Thu"
-.desc0 d41 4 "Fri"
-.desc0 d42 5 "Sat"
-.desc0 d43 6 "Sun"
-.desc d44 _hnf _add_arg 3 0 "Node"
-.desc d45 _hnf _hnf 0 0 "Leaf"
-.export __ex9_Start
+.desc d47 _hnf _add_arg 3 0 "Node"
+.desc d48 _hnf _hnf 0 0 "Leaf"
+.record r37 aaa 3 0 "Point"
+.record r41 aa 2 0 "Vector"
+.record r44 aa 2 0 "Q"
+.export __ex10_Start
 .o 0 0
-__ex9_Start
-	build _ 0 n17
+__ex10_Start
+	build _ 0 n21
 .d 1 0
 	jmp _driver
-.n 0 _ ea17
+.n 0 _
 .o 1 0
-n17
+n21
 	push_node _cycle_in_spine 0
-.o 1 0
-ea17
-.o 1 0
-s17
-	buildh _Nil 0
-	buildI 5
-	buildh _Cons 2
-	buildI 6
-	buildh _Cons 2
-	buildI 7
-	buildh _Cons 2
-	buildI 4
-	buildh _Cons 2
-	buildI 8
-	buildh _Cons 2
-	buildI 3
-	buildh _Cons 2
-	buildI 9
-	buildh _Cons 2
-	buildI 2
-	buildh _Cons 2
-	buildI 10
-	buildh _Cons 2
-	buildI 1
-	buildh _Cons 2
-.d 2 0
-	jmp s16
-.o 2 0
-s16
-	pushI 0
-	push_a 0
-	updatepop_a 0 1
-.d 2 1 i
-	jmp s15
-.o 2 1 i
-s15
-	push_a 0
-.d 1 0
-	jsr e_StdList_slength;47
+.d 0 0
+	jsr ea21
 .o 0 1 i
-	push_b 1
-	eqI
-	jmp_false else.1
+	fillI_b 0 0
 	pop_b 1
-	fill_a 0 1
-	pop_a 1
 .d 1 0
 	rtn
-else.1
-	pushI 1
-	push_b 1
-	addI
+.o 0 0
+ea21
+.o 0 0
+s21
+	create
+.d 1 0
+	jsr s2
+.o 1 0
+.d 1 0
+	jmp s20
+.o 1 0
+s20
 	create
 	push_a 1
 	update_a 1 2
 	updatepop_a 0 1
 .d 2 0
-	jsr s14
+	jsr s7
 .o 1 0
-	updatepop_b 0 1
-.d 2 1 i
-	jmp s15
-.n 1 _ ea14
-.o 1 0
-n14
-	push_node _cycle_in_spine 1
-.o 2 0
-ea14
-	jsr_eval 0
-.o 2 0
-s14
+	pushI 0
+.d 1 1 i
+	jmp s32
+.o 1 1 i
+s32
 	eq_desc _Nil 0 0
-	jmp_true case.2
-	jmp case.3
+	jmp_true case.1
+	jmp case.2
+case.1
+	pop_a 1
+.d 0 1 i
+	rtn
 case.2
-	fillh _Nil 0 1
-	pop_a 1
-.d 1 0
-	rtn
-case.3
 	repl_args 2 2
-	jsr_eval 1
-	eq_desc _Nil 0 1
-	jmp_true case.4
-	jmp case.5
-case.4
-	buildh _Nil 0
 	push_a 1
-	fillh _Cons 2 4
-	pop_a 2
-.d 1 0
-	rtn
-case.5
-	push_args 1 2 2
-	buildh _Nil 0
-	update_a 0 4
-	pop_a 1
-	push_a 2
 	jsr_eval 0
-	pushI_a 3
-	pop_a 1
+	push_b 0
+	updatepop_b 0 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 1 1 i
+	jsr s32
+.o 0 1 i
 	push_a 0
 	jsr_eval 0
 	pushI_a 1
 	pop_a 1
-	ltI
-	jmp_false else.6
-	push_a 1
-	push_a 3
-	buildh _Cons 2
-	build _ 1 n14
-	push_a 1
-	fillh _Cons 2 6
-	pop_a 4
+	pop_a 1
+	addI
+.d 0 1 i
+	rtn
+.n 1 _ ea7
+.o 1 0
+n7
+	push_node _cycle_in_spine 1
+.o 2 0
+ea7
+	jsr_eval 0
+.o 2 0
+s7
+	eq_desc d48 0 0
+	jmp_true case.3
+	jmp case.4
+case.3
+	fillh _Nil 0 1
+	pop_a 1
 .d 1 0
 	rtn
-else.6
-	push_a 1
-	push_a 1
+case.4
+	repl_args 3 3
+	push_a 2
+	build _ 1 n7
+	buildh _Nil 0
+	push_a 2
 	buildh _Cons 2
-	build _ 1 n14
-	push_a 3
-	fillh _Cons 2 6
-	pop_a 4
+	build e_StdList_d++ 2 e_StdList_n++
+	push_a 2
+	jsr_eval 0
+	create
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 5
+	update_a 0 4
+	update_a 0 6
+	pop_a 1
+.d 2 0
+	jsr s7
+.o 1 0
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jmp e_StdList_s++
+.o 1 0
+s2
+	buildh d48 0
+	buildh d48 0
+	buildI 3
+	buildh d47 3
+	buildh d48 0
+	buildh d48 0
+	buildI 1
+	buildh d47 3
+	buildI 2
+	fillh d47 3 3
 .d 1 0
 	rtn

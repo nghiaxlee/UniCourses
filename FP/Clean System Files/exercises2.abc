@@ -1,0 +1,272 @@
+.comp 920 00011101001
+.start __exercises2_Start
+.depend "_SystemEnum" "20111221133336"
+.depend "StdEnum" "20111221133336"
+.depend "StdMisc" "20111221133336"
+.depend "StdFunc" "20111221133336"
+.depend "StdCharList" "20111221133336"
+.depend "StdTuple" "20111221133336"
+.depend "StdOrdList" "20111221133336"
+.depend "StdList" "20111221133336"
+.depend "StdClass" "20111221133336"
+.depend "StdFile" "20111221133336"
+.depend "StdString" "20111221133336"
+.depend "_SystemArray" "20111221133336"
+.depend "StdArray" "20111221133334"
+.depend "StdChar" "20111221133336"
+.depend "StdReal" "20111221133336"
+.depend "StdInt" "20111221133336"
+.depend "StdOverloaded" "20111221133336"
+.depend "StdBool" "20111221133336"
+.depend "StdEnv" "20111221133336"
+.module m_exercises2 "exercises2" "20180427113034"
+.endinfo
+.implab _cycle_in_spine
+.implab _type_error
+.implab _hnf
+.impdesc _ind
+.implab _indirection _eaind
+.impdesc e_system_dif
+.implab e_system_nif e_system_eaif
+.implab e_system_sif
+.impdesc e_system_dAP
+.implab e_system_nAP e_system_eaAP
+.implab e_system_sAP
+.impdesc _Nil
+.impdesc _Cons
+.impdesc _Conss
+.implab n_Conss ea_Conss
+.impdesc _Consts
+.implab n_Consts ea_Consts
+.impdesc _Conssts
+.implab n_Conssts ea_Conssts
+.impdesc _Tuple
+.impdesc d_S.1
+.implab n_S.1 ea_S.1
+.impdesc d_S.2
+.implab n_S.2 ea_S.2
+.impdesc d_S.3
+.implab n_S.3 ea_S.3
+.impdesc d_S.4
+.implab n_S.4 ea_S.4
+.impdesc d_S.5
+.implab n_S.5 ea_S.5
+.impdesc d_S.6
+.implab n_S.6 ea_S.6
+.implab _driver
+.impdesc e_StdList_d++
+.implab e_StdList_s++
+.implab e_StdList_n++ e_StdList_ea++
+.impdesc e_StdClass_rEq;
+.impdesc e_StdInt_d==;16
+.implab e_StdInt_s<;17
+.impdesc e_StdOverloaded_r==;
+.implab e_StdBool_snot
+.desc d30 _hnf _add_arg 3 0 "Node"
+.desc d31 _hnf _hnf 0 0 "Leaf"
+.record r27 aa 2 0 "Q"
+.export __exercises2_Start
+.o 0 0
+__exercises2_Start
+	build _ 0 n9
+.d 1 0
+	jmp _driver
+.n 0 _ ea9
+.o 1 0
+n9
+	push_node _cycle_in_spine 0
+.o 1 0
+ea9
+.o 1 0
+s9
+	buildh _Nil 0
+	buildI 0
+	buildh _Cons 2
+	buildI 7
+	buildh _Cons 2
+	buildI 2
+	buildh _Cons 2
+	buildI 9
+	buildh _Cons 2
+	buildI 5
+	buildh _Cons 2
+	buildI 1
+	buildh _Cons 2
+	buildI 3
+	buildh _Cons 2
+	buildh e_StdInt_d==;16 0
+.d 3 0
+	jmp s32
+.o 3 0
+s14
+	create
+	push_a 2
+	push_a 2
+	update_a 2 4
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jsr s15
+.o 1 0
+.d 2 0
+	jmp s8
+.o 3 0
+s15
+	eq_desc _Nil 0 1
+	jmp_true case.1
+	jmp case.2
+case.1
+	fillh d31 0 2
+	pop_a 2
+.d 1 0
+	rtn
+case.2
+	push_args 1 2 2
+	buildh _Nil 0
+	update_a 0 4
+	pop_a 1
+	push_a 1
+	jsr_eval 0
+	create
+	push_a 4
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	update_a 3 6
+	update_a 2 5
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jsr s15
+.o 1 0
+	push_a 1
+	update_a 1 2
+	updatepop_a 0 1
+.d 3 0
+	jmp s16
+.n 2 _ ea16
+.o 1 0
+n16
+	push_node _cycle_in_spine 2
+.o 3 0
+ea16
+	jsr_eval 1
+.o 3 0
+s16
+	eq_desc d31 0 1
+	jmp_true case.3
+	jmp case.4
+case.3
+	buildh d31 0
+	buildh d31 0
+	push_a 2
+	fillh d30 3 5
+	pop_a 2
+.d 1 0
+	rtn
+case.4
+	push_args 1 3 3
+	buildh _Nil 0
+	update_a 0 5
+	pop_a 1
+	push_a 3
+	jsr_eval 0
+	pushI_a 4
+	pop_a 1
+	push_a 0
+	jsr_eval 0
+	pushI_a 1
+	pop_a 1
+	ltI
+	jmp_false else.5
+	push_a 1
+	push_a 4
+	build _ 2 n16
+	push_a 3
+	push_a 2
+	push_a 2
+	update_a 2 3
+	update_a 0 2
+	pop_a 1
+	fillh d30 3 8
+	pop_a 5
+.d 1 0
+	rtn
+else.5
+	pushI_a 3
+	pushI_a 0
+	ltI
+	notB
+	jmp_false else.6
+	push_a 2
+	push_a 4
+	build _ 2 n16
+	push_a 2
+	push_a 2
+	fillh d30 3 8
+	pop_a 5
+.d 1 0
+	rtn
+else.6
+	pop_a 3
+	jmp s16.1
+s16.1
+	pop_a 3
+	pushD m_exercises2
+	pushD x_16
+.d 0 2 ii
+	jmp _match_error
+.string x_16 "insertTree;15"
+.n 1 _ ea8
+.o 1 0
+n8
+	push_node _cycle_in_spine 1
+.o 2 0
+ea8
+	jsr_eval 0
+.o 2 0
+s8
+	eq_desc d31 0 0
+	jmp_true case.7
+	jmp case.8
+case.7
+	fillh _Nil 0 1
+	pop_a 1
+.d 1 0
+	rtn
+case.8
+	repl_args 3 3
+	push_a 2
+	build _ 1 n8
+	buildh _Nil 0
+	push_a 2
+	buildh _Cons 2
+	build e_StdList_d++ 2 e_StdList_n++
+	push_a 2
+	jsr_eval 0
+	create
+	push_a 1
+	update_a 1 2
+	update_a 0 1
+	pop_a 1
+	buildh _Nil 0
+	update_a 0 5
+	update_a 0 4
+	update_a 0 6
+	pop_a 1
+.d 2 0
+	jsr s8
+.o 1 0
+	update_a 1 4
+	updatepop_a 0 3
+.d 3 0
+	jmp e_StdList_s++
+.o 3 0
+s32
+	push_a 1
+	push_a 1
+	update_a 1 3
+	updatepop_a 0 2
+.d 3 0
+	jmp s14

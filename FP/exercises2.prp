@@ -1,15 +1,9 @@
 Version: 1.4
 MainModule
-	Name:	ex9
+	Name:	exercises2
 	Dir:	{Project}
 	DclOpen:	False
-	Icl
-		WindowPosition
-			X:	10
-			Y:	10
-			SizeX:	783
-			SizeY:	576
-	IclOpen:	False
+	IclOpen:	True
 OtherModules
 	Module
 		Name:	StdArray
@@ -84,19 +78,7 @@ OtherModules
 	Module
 		Name:	StdReal
 		Dir:	{Application}\Libraries\StdEnv
-		Dcl
-			WindowPosition
-				X:	10
-				Y:	10
-				SizeX:	800
-				SizeY:	576
 		DclOpen:	False
-		Icl
-			WindowPosition
-				X:	10
-				Y:	10
-				SizeX:	800
-				SizeY:	576
 		IclOpen:	False
 	Module
 		Name:	StdString
